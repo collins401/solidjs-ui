@@ -1,0 +1,5 @@
+// Vitest Snapshot v1
+
+exports[`<Button /> > renders 1`] = `"<button class=\\"go3912777184  go210439308\\" type=\\"button\\"><div class=\\"flex-center space-x-[3px]\\">测试Button</div></button>"`;
+
+exports[`<Button /> > updates 1`] = `"<button class=\\"go3912777184  go3533386438\\" type=\\"button\\"><div class=\\"flex-center space-x-[3px]\\">测试Button</div></button>"`;

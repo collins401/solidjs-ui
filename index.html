@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+    />
+    <title>Solidjs Mobile UI</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.0/vconsole.min.js"></script>
+    <script>
+       var vConsole = new VConsole();
+      this.globalThis || (this.globalThis = this);
+      window.onerror = function (msg, url, lineNo, columnNo, error) {
+        var string = msg.toLowerCase();
+        var substring = "script error";
+        if (string.indexOf(substring) > -1){
+            alert('Script Error: See Browser Console for Detail');
+        } else {
+            var message = [
+                'Message: ' + msg,
+                'URL: ' + url,
+                'Line: ' + lineNo,
+                'Column: ' + columnNo,
+                'Error object: ' + JSON.stringify(error)
+            ].join(' - ');
+            alert(message);
+        }
+        return false;
+      };
+    </script>
+  </head>
+  <body ontouchstart="">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

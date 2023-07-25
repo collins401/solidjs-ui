@@ -1,0 +1,19 @@
+/* @import url("./preflight.css"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+@layer base {
+  *,*:before,*:after {
+    -webkit-tap-highlight-color: transparent;
+    border-color: var(--color-border);
+  }
+}

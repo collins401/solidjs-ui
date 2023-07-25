@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+coverage
+dist-ssr
+dist
+*.local
+.idea
+pnpm-lock.yaml
