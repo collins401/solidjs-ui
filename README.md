@@ -1,11 +1,10 @@
 ![images](public/cover.png)
 
 ## Solidjs Mobile UI
-
-仍处于开发中的Solidjs Mobile UI 组件库, 暂无发布npm计划
-
-方案不完善，思路还在飞
-### Feature components
+ - 基于 Solidjs + Tailwindcss 的UI组件库
+ - 仍处于开发中, 暂无发布npm计划
+ - 方案不完善，思路还在飞
+## Feature components
 
 - `config-provider` 全局配置
 - `Button` 按钮
@@ -23,5 +22,8 @@
 - `ImageView` 图片预览
 - `Swipe` 滑块
 
-## FAQ
+## 参考
+ - [ant-mobile](https://github.com/ant-design/ant-design-mobile)
+ - [vant](https://github.com/youzan/vant) 
+ - [mint-ui](https://github.com/ElemeFE/mint-ui)
 
