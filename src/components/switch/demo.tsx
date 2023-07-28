@@ -27,12 +27,6 @@ export default function SwitchDemo() {
       <div class="text-color/60 mb-1 mx-5 mt-5">自定义文字、图案</div>
       <div class="bg-white p-5">
         <Switch checkedText="开" uncheckedText="关" />
-        <Switch
-          checked={checked()}
-          class="w-[120px]"
-          checkedText="开-文案有点长"
-          uncheckedText="开-文案有点长"
-        />
         <div class="mt-2">
           <Switch
             checkedText={

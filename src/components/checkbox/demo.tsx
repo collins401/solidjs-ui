@@ -45,10 +45,10 @@ export default function CheckboxDemo() {
         </div>
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">组合使用</div>
-      <CheckboxGroup class="flex space-x-2.5" value={checked()} onChange={(e) => setChecked(e)}>
+      <CheckboxGroup class="" value={checked()} onChange={(e) => setChecked(e)}>
         <For each={options}>
           {(item) => (
-            <div>
+            <div class="flex">
               <Checkbox value={item.value} />
               <div>{item.label}</div>
             </div>
