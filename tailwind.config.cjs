@@ -21,8 +21,8 @@ module.exports = {
       colors: {
         white: 'rgba(255,255,255,1)',
         primary: 'rgba(77,184,127,1)',
-        secondary: '#EB5B59',
-        danger: '#EB5B59',
+        secondary: 'rgba(235,91,89,1)',
+        danger: 'rgba(235,91,89,1)',
         border: {
           DEFAULT: 'var(--color-border)',
           button: 'var(--color-border-button)'

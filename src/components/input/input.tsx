@@ -1,6 +1,4 @@
 import { JSX, splitProps, createSignal, createEffect } from 'solid-js';
-import { css } from 'solid-styled-components';
-import { useConfigProvider } from '../config-provider';
 export interface InputProps extends JSX.InputHTMLAttributes<HTMLInputElement> {
   size?: number;
   block?: boolean;
@@ -11,7 +9,6 @@ export interface InputProps extends JSX.InputHTMLAttributes<HTMLInputElement> {
 }
 
 export function Input(props: InputProps) {
-  const { theme } = useConfigProvider();
   const [value, setValue] = createSignal<string | number>(props.value);
   const [local, rest] = splitProps(props, ['size', 'class', 'block', 'value', 'onChange']);
 
@@ -40,16 +37,9 @@ export function Input(props: InputProps) {
   }
   return (
     <input
-      class={`${theme.classPrefix}-input ${css`
-        border: none;
-        padding: 0 8px;
-        width: 100%;
-        background: transparent;
-        height: ${local.size ? local.size + 'px' : '30px'};
-        &:disabled {
-          opacity: 0.4;
-        }
-      `} caret-primary ${local.class ?? ''}`}
+      class={`so-input border-none w-full px-2 h-[32px] disabled:opacity-40 caret-primary ${
+        local.class ?? ''
+      }`}
       value={value()}
       onInput={onInput}
       onBlur={(e) => {
