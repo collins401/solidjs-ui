@@ -1,4 +1,4 @@
-import { createGlobalStyles, styled, setup } from 'solid-styled-components';
+import { createGlobalStyles, setup } from 'solid-styled-components';
 import { prefix } from 'goober/prefixer';
 setup(prefix, null);
 const Animate = createGlobalStyles`
@@ -60,6 +60,7 @@ const Animate = createGlobalStyles`
     }
     .fade-scale-exit-active {
       transition:  0.2s ease-in all;
+
     }
   `;
 export default Animate;

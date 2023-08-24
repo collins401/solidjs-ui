@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`<Button /> > renders 1`] = `"<button class=\\"go3912777184  go210439308\\" type=\\"button\\"><div class=\\"flex-center space-x-[3px]\\">测试Button</div></button>"`;
 

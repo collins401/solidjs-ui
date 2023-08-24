@@ -1,4 +1,4 @@
-import { createGlobalStyles, styled, setup } from 'solid-styled-components';
+import { createGlobalStyles, setup } from 'solid-styled-components';
 import { prefix } from 'goober/prefixer';
 setup(prefix, null);
 const GlobalStyle = createGlobalStyles`
@@ -38,6 +38,10 @@ const GlobalStyle = createGlobalStyles`
     }
     .so-button:active:before {
       content: '';
+    }
+    .so-button:focus-visible {
+      outline: 2px solid red;
+      outline-offset: 1px;
     }
     input {
       appearance: none;

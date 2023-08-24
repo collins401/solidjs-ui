@@ -3,6 +3,6 @@
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "voorjaar.windicss-intellisense",
+    "bradlc.vscode-tailwindcss"
   ]
 }

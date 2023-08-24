@@ -1,5 +1,5 @@
 import { mergeProps, JSX, createEffect } from 'solid-js';
-import { styled, css } from 'solid-styled-components';
+import { css } from 'solid-styled-components';
 import { SafeArea, useConfigProvider } from '@/components';
 
 interface SubmitBarProps {

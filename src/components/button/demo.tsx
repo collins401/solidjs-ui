@@ -1,5 +1,3 @@
-import { SvgIcon } from '../svgIcon';
-import { useToggle } from '../utils/useToggle';
 import { Button } from './index';
 export default function InputDemo() {
   return (
@@ -83,13 +81,13 @@ export default function InputDemo() {
       <div class="text-color/60 mb-1 mx-5 mt-5">Debounce</div>
       <div class="bg-white p-5 space-x-[5px]">
         <Button
-          loading="auto"
           type="primary"
-          onClick={async (e) => {
-            console.log(e);
-            return new Promise((resolve, reject) => {
+          loading="debounce"
+          onClick={async () => {
+            console.log('click');
+            return new Promise((resolve) => {
               setTimeout(() => {
-                resolve();
+                resolve(true);
               }, 3000);
             });
           }}

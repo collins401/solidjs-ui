@@ -15,7 +15,7 @@ export interface PopupProps {
 }
 
 const positionObj = {
-  center: 'fade',
+  center: 'fade-scale',
   left: 'fade-left',
   right: 'fade-right',
   bottom: 'fade-bottom',
