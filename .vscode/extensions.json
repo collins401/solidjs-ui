@@ -1,8 +1,8 @@
 {
   "recommendations": [
-    "EditorConfig.EditorConfig",
+    "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "voorjaar.windicss-intellisense",
+    "bradlc.vscode-tailwindcss"
   ]
 }

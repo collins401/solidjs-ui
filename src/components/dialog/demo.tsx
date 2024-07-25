@@ -129,7 +129,7 @@ export default function toastDemo() {
   return (
     <div class="m-5">
       <div class="text-color/60 mb-1">基础用法</div>
-      <div class="bg-white rounded">
+      <div class="bg-white dark:bg-black rounded">
         <div class="active:bg-active" on:click={open1}>
           <div class="p-3 pl-0 ml-5 border-b-[0.5px]">提示弹窗</div>
         </div>
@@ -144,7 +144,7 @@ export default function toastDemo() {
         </div>
       </div>
       <div class="text-color/60 mb-1 mt-4">高级用法（JSX）</div>
-      <div class="bg-white rounded">
+      <div class="bg-white dark:bg-black rounded">
         <div class="active:bg-active" on:click={open5}>
           <div class="p-3 pl-0 ml-5 border-b-[0.5px]">弹窗定制化</div>
         </div>
@@ -153,7 +153,7 @@ export default function toastDemo() {
         </div>
       </div>
       <div class="text-color/60 mb-1 mt-4">函数式调用</div>
-      <div class="bg-white rounded">
+      <div class="bg-white dark:bg-black rounded">
         <div class="active:bg-active" on:click={alert}>
           <div class="p-3 pl-0 ml-5 border-b-[0.5px]">Dialog.alert</div>
         </div>

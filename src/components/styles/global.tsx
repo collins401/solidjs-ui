@@ -53,6 +53,9 @@ const GlobalStyle = createGlobalStyles`
       font: inherit;
       color: inherit
     }
+    button {
+      background-image: none;
+    }
     button[type=button] {
       -webkit-tap-highlight-color: transparent;
       appearance: button;

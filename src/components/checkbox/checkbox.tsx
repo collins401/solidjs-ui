@@ -1,4 +1,4 @@
-import { JSX, createUniqueId, createSignal, useContext, createEffect } from 'solid-js';
+import { JSX, createUniqueId, createSignal, useContext, createEffect, mergeProps } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { useConfigProvider } from '../config-provider';
 import { CheckboxGroupContext } from './checkboxGroup';
@@ -51,8 +51,9 @@ const Input = styled('input')((props: { style: any }) => ({
 }));
 export function Checkbox(props: CheckboxProps) {
   const [checked, setChecked] = createSignal(props.checked);
-  const id = createUniqueId();
   const { theme } = useConfigProvider();
+  const defaultProps = mergeProps({ inputStyle: { color: theme.colorPrimary } }, props);
+  const id = createUniqueId();
   const groupContext = useContext(CheckboxGroupContext);
   createEffect(() => {
     setChecked(props.checked);
@@ -75,13 +76,12 @@ export function Checkbox(props: CheckboxProps) {
     <Label for={id} class={`san-checkbox ${props.class ?? ''}`} style={props.style}>
       <Input
         type="checkbox"
-        class={`san-checkbox__input`}
         id={id}
         indeterminate={props.indeterminate}
         checked={checked()}
         disabled={props.disabled}
         onInput={({ target: { checked } }) => changeInput(checked)}
-        style={{ color: theme.colorPrimary, ...props.inputStyle }}
+        style={{ ...defaultProps.inputStyle }}
       />
       <span>{props.children}</span>
     </Label>

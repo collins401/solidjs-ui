@@ -1,4 +1,3 @@
-import colors from 'tailwindcss/colors'
 /** @type {import('tailwindcss').Config} */
 // 用变量定义配置，方便多主题切换
 function withOpacityValue(variable) {
@@ -10,12 +9,11 @@ function withOpacityValue(variable) {
   };
 }
 module.exports = {
-  preflight: false,
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  darkMode: 'class',
+  // corePlugins: {
+  //   // preflight: false
+  // },
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'selector',
   theme: {
     extend: {
       colors: {
@@ -28,12 +26,13 @@ module.exports = {
           button: 'var(--color-border-button)'
         },
         active: withOpacityValue('--color-bg-active'), // 常规白底点击背景
+        black: 'rgba(39,39,42, 1)'
       },
       textColor: {
         // 默认文字颜色rgba(0,0,0,.85); 其他色值可用 text-color/60, text-color/50等
         color: withOpacityValue('--color-default'),
         // 不透明灰色文字
-        solidGray: 'rgba(0,0,0,.60)',
+        solidGray: 'rgba(0,0,0,.60)'
       },
       borderColor: {
         button: 'var(--color-border-button)'
@@ -57,4 +56,4 @@ module.exports = {
     }
   },
   plugins: [require('@tailwindcss/aspect-ratio')]
-}
+};

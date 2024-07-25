@@ -36,7 +36,7 @@ export default function CheckboxDemo() {
           <Checkbox class="!text-[20px]" checked={true}>
             20px
           </Checkbox>
-          <Checkbox class="!text-[40px] " inputStyle={{ color: 'red' }} checked={true}>
+          <Checkbox class="!text-[40px]" inputStyle={{ color: 'red' }} checked={true}>
             40px
           </Checkbox>
           <Checkbox class="!text-[60px] " checked={true}>

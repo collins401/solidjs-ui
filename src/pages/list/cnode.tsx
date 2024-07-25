@@ -1,5 +1,5 @@
 import { createResource, createSignal, For, Index } from 'solid-js';
-import { useNavigate, Outlet } from '@solidjs/router';
+import { useNavigate } from '@solidjs/router';
 import { Navbar, SafeArea } from '@/components';
 import { cnodeTopics } from '@/services/app';
 import LockMaskScroll from '@/components/utils/use-lock-scroll';
@@ -35,7 +35,6 @@ export default function List() {
         </For>
         <SafeArea />
       </div>
-      <Outlet />
     </>
   );
 }

@@ -1,12 +1,10 @@
-import { Component, ErrorBoundary, createSignal, Suspense, createEffect } from 'solid-js';
-import { useRoutes } from '@solidjs/router';
-import { ConfigProvider, Loading, ConfigProviderTheme } from '@/components/';
+import { ErrorBoundary, Suspense } from 'solid-js';
+import { ConfigProvider, Loading } from '@/components/';
 import useDark from '@/hooks/useDark';
 
 import { routes } from './routes';
 
-const App: Component = () => {
-  const Route = useRoutes(routes);
+const App = (props) => {
   const [_] = useDark();
 
   let colorPrimary = localStorage.getItem('colorPrimary');
@@ -27,7 +25,7 @@ const App: Component = () => {
         <ErrorBoundary
           fallback={(err, reset) => <div onClick={reset}>Error: {err.toString()}</div>}
         >
-          <Route />
+          {props.children}
         </ErrorBoundary>
       </ConfigProvider>
     </Suspense>

@@ -40,18 +40,6 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           assetFileNames: 'static/[ext]/[name]-[hash].[ext]'
         }
       }
-    },
-    test: {
-      environment: 'jsdom',
-      transformMode: {
-        web: [/.[jt]sx?/]
-      },
-      include: ['src/components/**/{__test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-      setupFiles: ['node_modules/@testing-library/jest-dom/extend-expect.js'],
-      // otherwise, solid would be loaded twice:
-      deps: { registerNodeLoader: true },
-      threads: false,
-      isolate: false
     }
   };
 };

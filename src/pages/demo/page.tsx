@@ -1,5 +1,5 @@
 import { For } from 'solid-js';
-import { Outlet, useNavigate } from '@solidjs/router';
+import { useNavigate } from '@solidjs/router';
 
 export default function DemoPage() {
   const navigate = useNavigate();
@@ -25,20 +25,18 @@ export default function DemoPage() {
     { id: 'swipe', name: '滑块' }
   ];
   return (
-    <>
-      <div class="m-4 bg-white rounded">
-        <For each={pageRoutes}>
-          {(page, i) => (
-            <div class="active:bg-active/80" on:click={() => jump(page.id)}>
-              <div class="mx-3 py-3 " classList={{ 'border-t': i() !== 0 }}>
-                <span class="capitalize">
-                  {page.id} {page.name}
-                </span>
-              </div>
+    <div class="m-4 bg-white rounded">
+      <For each={pageRoutes}>
+        {(page, i) => (
+          <div class="active:bg-active/80" on:click={() => jump(page.id)}>
+            <div class="mx-3 py-3 " classList={{ 'border-t': i() !== 0 }}>
+              <span class="capitalize">
+                {page.id} {page.name}
+              </span>
             </div>
-          )}
-        </For>
-      </div>
-    </>
+          </div>
+        )}
+      </For>
+    </div>
   );
 }

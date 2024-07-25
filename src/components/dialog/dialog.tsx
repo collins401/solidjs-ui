@@ -98,7 +98,7 @@ export function Dialog(props: DialogProps) {
       <Transition name="fade-scale">
         <Show when={visible()}>
           <DialogStyle
-            class={`${config?.theme.classPrefix}-dialog bg-white ${mainProps.class || ''}`}
+            class={`${config?.theme.classPrefix}-dialog bg-white dark:bg-black ${mainProps.class || ''}`}
             style={mainProps.style}
           >
             <Show when={mainProps.title}>
@@ -113,7 +113,7 @@ export function Dialog(props: DialogProps) {
             <Show
               when={mainProps.footer}
               fallback={
-                <div class="flex-center text-center leading-[45px] border-t-[0.5px] text-base">
+                <div class="flex items-center text-center leading-[45px] border-t-[0.5px] text-base">
                   <Show when={mainProps.showCancelButton}>
                     <div
                       class="flex-1 text-color/60 border-r-[0.5px] active:bg-active"
@@ -123,9 +123,8 @@ export function Dialog(props: DialogProps) {
                     </div>
                   </Show>
                   <div
-                    class="flex-1 h-[45px] font-500 active:bg-active flex-center"
+                    class="flex-1 h-[45px] font-medium active:bg-active flex-center text-primary"
                     classList={{ 'pointer-events-none': innerLoading() }}
-                    style={{ color: config?.theme.colorPrimary }}
                     on:click={confirm}
                   >
                     <Show when={innerLoading()} fallback={mainProps.okButtonText}>
