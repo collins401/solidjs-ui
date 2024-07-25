@@ -1,4 +1,4 @@
-import { createEffect, createMemo, createSignal, JSX, Show, splitProps } from 'solid-js';
+import { createEffect, createSignal, JSX, Show, splitProps } from 'solid-js';
 import { Loading } from '../loading';
 import { isPromise } from '../utils';
 import { cva, VariantProps } from 'class-variance-authority';
@@ -38,11 +38,16 @@ export interface ButtonProps
   style?: any;
   class?: any;
   classList?: any;
-  loading?: boolean | 'auto';
+  /**
+   * @description loading 状态
+   * @type debounce | 当onClick为异步事件时，开启防抖
+   */
+  loading?: boolean | 'debounce';
   block?: boolean;
   children?: string | JSX.Element;
   onClick?: (val: any) => void;
 }
+
 export function Button(props: ButtonProps) {
   const [innerLoading, setInnerLoading] = createSignal(false);
   const [local, rest] = splitProps(props, [
@@ -56,7 +61,7 @@ export function Button(props: ButtonProps) {
   ]);
 
   createEffect(() => {
-    if (local.loading && local.loading !== 'auto') {
+    if (local.loading && local.loading !== 'debounce') {
       setInnerLoading(local.loading);
     } else {
       setInnerLoading(false);
@@ -67,7 +72,7 @@ export function Button(props: ButtonProps) {
     if (!local.onClick || innerLoading()) return;
     if (isPromise(local.onClick)) {
       try {
-        if (local.loading === 'auto') {
+        if (local.loading === 'debounce') {
           setInnerLoading(true);
           await local.onClick(e);
           setInnerLoading(false);
@@ -84,6 +89,7 @@ export function Button(props: ButtonProps) {
   return (
     <button
       onClick={handleClick}
+      type="button"
       class={clsx(
         button({
           type: local.type,

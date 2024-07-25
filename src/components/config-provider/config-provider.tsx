@@ -1,4 +1,4 @@
-import { createContext, useContext, createSignal, mergeProps, splitProps } from 'solid-js';
+import { createContext, useContext, mergeProps } from 'solid-js';
 import type { JSX } from 'solid-js';
 import GlobalStyle from '../styles/global';
 
@@ -28,17 +28,17 @@ export interface ConfigProviderProps {
 
 const ConfigProviderContext = createContext<ConfigProviderType | null>({
   config: {
-    duration: 3000
+    // duration: 3000
   },
   theme: {
-    colorPrimary: '#07c160',
-    colorBorder: '#e5e5ee',
-    classPrefix: 'so',
-    defaultButtonHeight: '36px',
-    baseBorderRadius: '4px',
-    defaultSwitchHeight: 26,
-    maskOpacity: 0.7,
-    maskZIndex: 1000
+    // colorPrimary: '#07c160',
+    // colorBorder: '#e5e5ee',
+    // classPrefix: 'so',
+    // defaultButtonHeight: '36px',
+    // baseBorderRadius: '4px',
+    // defaultSwitchHeight: 26,
+    // maskOpacity: 0.7,
+    // maskZIndex: 1000
   }
 });
 const defaultTheme = {
