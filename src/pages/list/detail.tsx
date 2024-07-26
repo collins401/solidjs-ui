@@ -38,7 +38,7 @@ export default function DetailPage() {
           <div class="border-t-[1px] mt-3 pt-2 break-all" textContent={detail()?.content} />
         </div>
         <SubmitBar>
-          <div class="p-4 flex-center space-x-[10px]">
+          <div class="p-4 flex justify-center items-center space-x-[10px]">
             <Button size="large" class="flex-1 text-16px" onClick={() => navigate(-1)}>
               返回
             </Button>

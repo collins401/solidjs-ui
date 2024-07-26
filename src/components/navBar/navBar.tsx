@@ -1,6 +1,7 @@
-import { createEffect, createSignal, JSX, mergeProps } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { mergeProps } from 'solid-js';
 import { useLocation, useNavigate } from '@solidjs/router';
-import { styled, css } from 'solid-styled-components';
+import { css } from 'solid-styled-components';
 import { SvgIcon, useConfigProvider } from '@/components';
 import createEntryPath from './store';
 
@@ -44,7 +45,7 @@ export function Navbar(props: NavbarProps) {
     <>
       <div
         classList={{ fixed: mianProps.fixed }}
-        class={`${theme.classPrefix}-navbar bg-white flex items-center ${css`
+        class={`${theme.classPrefix}-navbar bg-color text-color flex items-center ${css`
           position: ${mianProps.fixed ? 'fixed' : 'relative'};
           width: 100%;
           left: 0;
@@ -55,9 +56,9 @@ export function Navbar(props: NavbarProps) {
         style={{ height: `${mianProps.height}px`, 'line-height': `${mianProps.height}px` }}
       >
         <div class="w-12 flex-shrink-0" on:click={back}>
-          {props.left ? props.left : !props.hideBack && <SvgIcon type="back" fill="fill-black" />}
+          {props.left ? props.left : !props.hideBack && <SvgIcon type="back" />}
         </div>
-        <div class="flex-1 text-base font-600 truncate">{props.title}</div>
+        <div class="flex-1 text-base font-semibold truncate">{props.title}</div>
         <div class="w-12 flex-shrink-0">{props.right}</div>
       </div>
       {mianProps.fixed && <div style={{ height: `${mianProps.height}px` }} />}

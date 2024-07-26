@@ -132,7 +132,7 @@ export function Calendar(props: CalendarProps) {
                   <For each={calendarData()}>
                     {(month) => (
                       <>
-                        <div class="font-500 text-left pl-2 mt-3">
+                        <div class="font-medium text-left pl-2 mt-3">
                           {dayjs(month).format('YYYY年MM月')}
                         </div>
                         <MonthPanel
@@ -145,10 +145,10 @@ export function Calendar(props: CalendarProps) {
                   </For>
                 </div>
               </div>
-              <div class="border-t flex-between px-4 py-3">
+              <div class="border-t flex items-center justify-between px-4 py-3">
                 <span
                   on:click={clear}
-                  class="font-500"
+                  class="font-medium"
                   classList={{
                     '!text-color/30': rangeDate().length === 0
                   }}

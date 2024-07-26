@@ -45,7 +45,7 @@ export default function PickerDemo() {
       <PickerStyled class="bg-white">
         <PickerSolt columns={jsLib} value="周5" />
       </PickerStyled>
-      <PickerStyled class="bg-white mt-3 flex-center">
+      <PickerStyled class="bg-white mt-3 flex justify-center items-center">
         <PickerSolt columns={jsTool} />
         <PickerSolt columns={jsLib} />
       </PickerStyled>

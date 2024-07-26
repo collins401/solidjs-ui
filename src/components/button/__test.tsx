@@ -6,7 +6,7 @@ describe('<Button />', () => {
   test('renders', () => {
     const { container, unmount } = render(() => <Button type="primary">测试Button</Button>);
     expect(container.innerHTML).toMatchInlineSnapshot(
-      '"<button class=\\"so-button bg-primary text-white border-primary text-14px h-8 px-3 rounded\\">测试Button</button>"'
+      '"<button class=\\"so-button bg-primary text-white border-primary text-sm h-8 px-3 rounded\\">测试Button</button>"'
     );
     unmount();
   });
@@ -24,7 +24,7 @@ describe('<Button />', () => {
     fireEvent.click(button);
     await buttonClicked;
     expect(container.innerHTML).toMatchInlineSnapshot(
-      '"<button class=\\"so-button border border-button text-14px h-8 px-3 rounded\\">测试Button</button>"'
+      '"<button class=\\"so-button border border-button text-14sm h-8 px-3 rounded\\">测试Button</button>"'
     );
     unmount();
   });

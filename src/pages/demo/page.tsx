@@ -25,7 +25,7 @@ export default function DemoPage() {
     { id: 'swipe', name: '滑块' }
   ];
   return (
-    <div class="m-4 bg-white rounded">
+    <div class="m-4 bg-color  rounded">
       <For each={pageRoutes}>
         {(page, i) => (
           <div class="active:bg-active/80" on:click={() => jump(page.id)}>

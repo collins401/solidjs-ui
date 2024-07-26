@@ -14,9 +14,9 @@ function Home() {
           👉查看UI
         </A>
       </div>
-      <div class="bg-white rounded mx-4 p-5 leading-10">
-        <div class="text-16px font-600 mb-2">Vite + Solidjs构建mobile start项目</div>
-        <div class="flex-between border-t">
+      <div class="bg-color rounded mx-4 p-5 leading-10">
+        <div class="text-base font- mb-2">Vite + Solidjs构建mobile start项目</div>
+        <div class="flex items-center justify-between border-t">
           ✨暗黑模式
           <Switch checked={dark()} onChange={toggle} />
         </div>

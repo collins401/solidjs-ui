@@ -17,7 +17,7 @@ export default function InputDemo() {
       <div class="bg-white pl-2">
         <Input placeholder="请输入内容" class="caret-primary" size={40} />
       </div>
-      <p class="flex-between text-color/60 mb-1 mt-5 px-5">
+      <p class="flex items-center justify-between text-color/60 mb-1 mt-5 px-5">
         受控模式
         {value().length > 10 && <span class="text-danger">长度超过10个字符</span>}
       </p>

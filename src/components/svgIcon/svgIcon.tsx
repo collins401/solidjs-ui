@@ -26,7 +26,6 @@ export interface SvgIconProps {
 export function SvgIcon(props: SvgIconProps) {
   const mainProps = mergeProps(
     {
-      color: '#eee',
       size: '16px'
     },
     props

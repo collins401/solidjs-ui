@@ -1,12 +1,13 @@
 /* @import './dark.css'; */
 :root {
-  --color-default: 0,0,0;
-  --color-text: rgba(var(--color-default),.85);
+  --color-default: 0, 0, 0;
+  --color-text: rgba(var(--color-default), 0.85);
   --color-bg: #f8f8f8;
-  --color-bg-active: 249,249,249;
+  --color-bg-active: 249, 249, 249;
   --color-border: #ededed;
-  --color-border-button: rgba(var(--color-default),.15);
+  --color-border-button: rgba(var(--color-default), 0.15);
   --color-white: #fff;
+  --bg-background: 255, 255, 255;
 }
 /* -webkit-tap-highlight-color: transparent; */
 /* *,*::before,*::after {
@@ -15,7 +16,8 @@
   border-color: var(--color-border);
 
 } */
-html,body {
+html,
+body {
   height: 100%;
 }
 .border-t {
@@ -27,45 +29,65 @@ body {
   transition: 0.2s background ease-in-out;
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
 }
 .bg {
   background: var(--color-bg);
 }
-h1,h2,h3,h4,h5,h6, p, ul, ol, li dl, dt, dd {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li dl,
+dt,
+dd {
   margin: 0;
   padding: 0;
 }
 
-img, svg {
+img,
+svg {
   max-width: 100%;
 }
 a {
   color: inherit;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  display: none
+  display: none;
 }
-@media screen and (min-width:414px)  {
+@media screen and (min-width: 414px) {
   html {
     font-size: 17.664px;
   }
 }
-@media screen and (max-width:375px)  {
+@media screen and (max-width: 375px) {
   html {
     font-size: 16px;
   }
 }
-@media screen and (max-width:360px)  {
+@media screen and (max-width: 360px) {
   html {
     font-size: 15.36px;
   }
 }
-@media screen and (max-width:320px)  {
+@media screen and (max-width: 320px) {
   html {
     font-size: 14px;
   }
 }
-

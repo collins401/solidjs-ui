@@ -1,14 +1,8 @@
-import {
-  createEffect,
-  createMemo,
-  createSignal,
-  createUniqueId,
-  JSX,
-  Show,
-  splitProps
-} from 'solid-js';
+import type { JSX } from 'solid-js';
+import { createEffect, createMemo, createSignal, createUniqueId, Show, splitProps } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { cva, VariantProps } from 'class-variance-authority';
+import type { VariantProps } from 'class-variance-authority';
+import { cva } from 'class-variance-authority';
 import clsx from 'clsx';
 import { useConfigProvider } from '../config-provider';
 import { Loading } from '../loading';
@@ -131,7 +125,9 @@ export function Switch(props: SwitchProps) {
         class={`${theme.classPrefix}-switch--node min-w-[50px] relative flex items-center justify-between`}
       >
         <span
-          class={clsx('inline-block flex-center !bg-white rounded-full absolute transition-all')}
+          class={clsx(
+            'inline-block flex justify-center items-center !bg-white rounded-full absolute transition-all'
+          )}
           style={{
             left: checked() ? `calc(100% - ${HEIGHT() - 4}px)` : 0,
             height: HEIGHT() - 4 + 'px',

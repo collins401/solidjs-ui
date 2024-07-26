@@ -1,4 +1,5 @@
-import { createEffect, createSignal, mergeProps, JSX, Show, onCleanup } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { createEffect, createSignal, mergeProps, Show, onCleanup } from 'solid-js';
 import { Mask, Loading } from '@/components';
 import { styled } from 'solid-styled-components';
 import { Transition } from 'solid-transition-group';
@@ -123,7 +124,7 @@ export function Dialog(props: DialogProps) {
                     </div>
                   </Show>
                   <div
-                    class="flex-1 h-[45px] font-medium active:bg-active flex-center text-primary"
+                    class="flex-1 h-[45px] font-medium active:bg-active flex items-center justify-center text-primary"
                     classList={{ 'pointer-events-none': innerLoading() }}
                     on:click={confirm}
                   >

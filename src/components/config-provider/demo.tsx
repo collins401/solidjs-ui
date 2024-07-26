@@ -34,7 +34,7 @@ export default function ConfigProviderDemo() {
 
   return (
     <div class="m-3 ">
-      <div class="bg-white px-1 py-4 rounded shadow">
+      <div class="bg-color px-1 py-4 rounded shadow">
         <div class="grid grid-cols-6">
           <For each={themeColors}>
             {(color) => (
@@ -57,7 +57,7 @@ export default function ConfigProviderDemo() {
           </div>
         </div>
       </div>
-      <div class="bg-white p-4 rounded-lg shadow">
+      <div class="bg-color p-4 rounded-lg shadow">
         <div class="grid grid-cols-7 text-center leading-[20px]">
           <For each={WEEK_EN}>
             {(e, i) => <div classList={{ 'text-color/40': i() === 0 || i() === 6 }}>{e}</div>}
@@ -78,7 +78,7 @@ export default function ConfigProviderDemo() {
           value={['2023-02-08', '2023-02-17']}
           class="mt-3"
         />
-        <div class="flex-between ">
+        <div class="flex items-center justify-between ">
           <Switch
             checkedText={
               <svg

@@ -1,7 +1,9 @@
-import { createEffect, createSignal, JSX, Show, splitProps } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { createEffect, createSignal, Show, splitProps } from 'solid-js';
 import { Loading } from '../loading';
 import { isPromise } from '../utils';
-import { cva, VariantProps } from 'class-variance-authority';
+import type { VariantProps } from 'class-variance-authority';
+import { cva } from 'class-variance-authority';
 import clsx from 'clsx';
 
 export type ButtonBaseProps = VariantProps<typeof button>;
@@ -13,9 +15,9 @@ const button = cva('so-button', {
       default: ['border border-button']
     },
     size: {
-      small: ['text-12px', 'h-7', 'px-2 rounded'],
-      medium: ['text-14px h-8 px-3 rounded'],
-      large: ['text-16px', 'h-12', 'px-4 rounded-lg font-medium']
+      small: ['text-xs', 'h-7', 'px-2 rounded'],
+      medium: ['text-sm h-8 px-3 rounded'],
+      large: ['text-base', 'h-12', 'px-4 rounded-lg font-medium']
     },
     /** outline */
     outline: {

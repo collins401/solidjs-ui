@@ -60,7 +60,7 @@ export function ToastInstance(props: ToastProps) {
         <MaskStyled />
       </Show>
       <MaskBox
-        class="flex-center"
+        class="flex justify-center items-center"
         classList={{
           'p-5': !!toastProps.icon,
           '!w-[120px] !h-[120px]': !!toastProps.icon

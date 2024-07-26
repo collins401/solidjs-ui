@@ -44,9 +44,9 @@ export default function CalendarDemo() {
     <div class="m-3">
       <div class="text-color/60 mb-1">自定义面板日历及水印: {value1().toString()}</div>
       <div class="bg-white rounded shadow p-4 mb-3">
-        <div class="flex-between text-center mb-3 space-x-2">
+        <div class="flex items-center justify-between text-center mb-3 space-x-2">
           <SvgIcon fill="fill-primary" type="back" onClick={() => switchMonth(-1)} />
-          <span class="text-16px font-500">{dayjs(month()).format('YYYY年MM月')}</span>
+          <span class="text-base font-medium">{dayjs(month()).format('YYYY年MM月')}</span>
           <SvgIcon
             onClick={() => switchMonth(1)}
             type="back"
@@ -71,7 +71,7 @@ export default function CalendarDemo() {
       </div>
       <div class="bg-white rounded shadow my-3">
         <div class=" border-b active:bg-active">
-          <div class="flex-between p-3" on:click={singleToggle}>
+          <div class="flex items-center justify-between p-3" on:click={singleToggle}>
             <div>选择日期</div>
             <div>
               <span>{value2()}</span>
@@ -81,7 +81,7 @@ export default function CalendarDemo() {
           </div>
         </div>
         <div class="border-b active:bg-active">
-          <div class="flex-between p-3" on:click={toggle}>
+          <div class="flex items-center justify-between p-3" on:click={toggle}>
             <div>选择日期范围</div>
             <div>
               <span>{value3().toString()}</span>
@@ -91,7 +91,7 @@ export default function CalendarDemo() {
           </div>
         </div>
         <div class="active:bg-active">
-          <div class="flex-between p-3" on:click={multipleToggle}>
+          <div class="flex items-center justify-between p-3" on:click={multipleToggle}>
             <div class="flex-shrink-0 mr-3">选择多个日期</div>
             <div class="text-right flex-1">
               <span>{value4().toString()}</span>

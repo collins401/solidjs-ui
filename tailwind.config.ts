@@ -17,7 +17,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        white: 'rgba(255,255,255,1)',
         primary: 'rgba(77,184,127,1)',
         secondary: 'rgba(235,91,89,1)',
         danger: 'rgba(235,91,89,1)',
@@ -25,14 +24,19 @@ module.exports = {
           DEFAULT: 'var(--color-border)',
           button: 'var(--color-border-button)'
         },
-        active: withOpacityValue('--color-bg-active'), // 常规白底点击背景
-        black: 'rgba(39,39,42, 1)'
+        active: withOpacityValue('--color-bg-active') // 常规白底点击背景
+      },
+      backgroundColor: {
+        color: 'rgba(var(--bg-background), 1)' // 默认light 下白色背景
       },
       textColor: {
         // 默认文字颜色rgba(0,0,0,.85); 其他色值可用 text-color/60, text-color/50等
-        color: withOpacityValue('--color-default'),
+        color: 'rgba(var(--color-default), 0.85)', // 默认light 下黑色文字
         // 不透明灰色文字
         solidGray: 'rgba(0,0,0,.60)'
+      },
+      fillColor: {
+        color: withOpacityValue('--color-default') // 默认light 下黑色文字
       },
       borderColor: {
         button: 'var(--color-border-button)'

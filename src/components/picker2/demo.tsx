@@ -58,7 +58,7 @@ export default function PickerSlot2Demo() {
       <div class="text-color/60 mb-1">基础用法</div>
       <div class="bg-white rounded">
         <div class="border-b active:bg-active">
-          <div class="flex-between p-3" on:click={() => open(1)}>
+          <div class="flex items-center justify-between p-3" on:click={() => open(1)}>
             <div>选择构建工具</div>
             <div>
               {value1()}
@@ -68,7 +68,7 @@ export default function PickerSlot2Demo() {
           </div>
         </div>
         <div class="border-b active:bg-active">
-          <div class="flex-between p-3" on:click={() => open(2)}>
+          <div class="flex items-center justify-between p-3" on:click={() => open(2)}>
             <div>选择js框架</div>
             <div>
               <span>{value2()}</span>
@@ -78,7 +78,7 @@ export default function PickerSlot2Demo() {
           </div>
         </div>
         <div class="active:bg-active">
-          <div class="flex-between p-3" on:click={() => open(3)}>
+          <div class="flex items-center justify-between p-3" on:click={() => open(3)}>
             <div>配置脚手架</div>
             <div>
               <span>{value3().toString()}</span>

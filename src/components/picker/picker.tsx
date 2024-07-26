@@ -94,8 +94,8 @@ export function Picker(props: PickerProps) {
       closeOnMaskClick={true}
       onClose={cancel}
     >
-      <div class="flex-center font-500 leading-[48px] border-b text-center text-base">
-        <div class="w-[60px] text-color/60 font-400" on:click={cancel}>
+      <div class="flex justify-center items-center font-medium leading-[48px] border-b text-center text-base">
+        <div class="w-[60px] text-color/60 font-normal" on:click={cancel}>
           取消
         </div>
         <div class="flex-1 truncate">{mainProps.title}</div>
@@ -110,7 +110,7 @@ export function Picker(props: PickerProps) {
           确定
         </div>
       </div>
-      <PickerStyled class={`${theme.classPrefix}-picker flex-center`}>
+      <PickerStyled class={`${theme.classPrefix}-picker flex justify-center items-center`}>
         <For each={mainProps.columns}>
           {(slot, i) => (
             <PickerSolt
