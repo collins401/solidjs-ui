@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyles`
       content: '';
     }
     .so-button:focus-visible {
-      outline: 2px solid red;
+      outline: 2px solid currentColor;
       outline-offset: 1px;
     }
     input {

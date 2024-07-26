@@ -35,9 +35,6 @@ module.exports = {
         // 不透明灰色文字
         solidGray: 'rgba(0,0,0,.60)'
       },
-      fillColor: {
-        color: withOpacityValue('--color-default') // 默认light 下黑色文字
-      },
       borderColor: {
         button: 'var(--color-border-button)'
       },
