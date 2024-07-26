@@ -42,10 +42,10 @@ export default function PickerDemo() {
   }
   return (
     <div class="m-5">
-      <PickerStyled class="bg-white">
+      <PickerStyled class="bg-color">
         <PickerSolt columns={jsLib} value="周5" />
       </PickerStyled>
-      <PickerStyled class="bg-white mt-3 flex justify-center items-center">
+      <PickerStyled class="bg-color mt-3 flex justify-center items-center">
         <PickerSolt columns={jsTool} />
         <PickerSolt columns={jsLib} />
       </PickerStyled>

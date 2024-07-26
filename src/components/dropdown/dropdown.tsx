@@ -1,7 +1,7 @@
-import { cva, VariantProps } from 'class-variance-authority';
 import clsx from 'clsx';
 import { useConfigProvider } from '../config-provider';
-import { JSX, splitProps } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { splitProps } from 'solid-js';
 
 export interface DropdownProps {
   children?: string | JSX.Element;
@@ -42,14 +42,14 @@ const DropdownItem = (props: DropdownItemProps) => {
   );
 };
 export function Dropdown(props: DropdownProps) {
-  const [local, rest] = splitProps(props, ['children', 'onChange']);
+  const [local] = splitProps(props, ['children', 'onChange']);
   const { theme } = useConfigProvider();
 
   return (
     <div
       class={clsx(
         `${theme.classPrefix}-dropdown`,
-        'bg-white text-current flex items-center justify-center'
+        'bg-color text-current flex items-center justify-center'
       )}
     >
       {local.children}

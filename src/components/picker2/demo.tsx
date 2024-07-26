@@ -56,7 +56,7 @@ export default function PickerSlot2Demo() {
   return (
     <div class="m-5">
       <div class="text-color/60 mb-1">基础用法</div>
-      <div class="bg-white rounded">
+      <div class="bg-color rounded">
         <div class="border-b active:bg-active">
           <div class="flex items-center justify-between p-3" on:click={() => open(1)}>
             <div>选择构建工具</div>

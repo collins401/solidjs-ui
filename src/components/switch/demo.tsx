@@ -6,7 +6,7 @@ export default function SwitchDemo() {
   const [dark, toggle] = useDark();
 
   async function beforChange() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve(true);
       }, 3000);
@@ -15,17 +15,17 @@ export default function SwitchDemo() {
   return (
     <div class="my-5">
       <div class="text-color/60 mb-1 mx-5">基础用法</div>
-      <div class="bg-white py-3 px-5">
+      <div class="bg-color py-3 px-5">
         <Switch />
         <Switch disabled checked={true} />
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">有默认值</div>
-      <div class="bg-white p-5">
+      <div class="bg-color p-5">
         <Switch checked={checked()} onChange={(e) => setChecked(e)} />{' '}
         <span>-{checked() ? 'true' : 'off'}</span>
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">自定义文字、图案</div>
-      <div class="bg-white p-5">
+      <div class="bg-color p-5">
         <Switch checkedText="开" uncheckedText="关" />
         <div class="mt-2">
           <Switch
@@ -72,12 +72,12 @@ export default function SwitchDemo() {
         </div>
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">异步控制</div>
-      <div class="bg-white p-5 space-y-5px">
+      <div class="bg-color p-5 space-y-5px">
         <Switch checkedText="开" uncheckedText="关" size={32} beforeChange={beforChange} />
         <Switch checkedText="ON" checked uncheckedText="OFF" size={32} beforeChange={beforChange} />
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">自定义颜色、大小</div>
-      <div class="bg-white p-5 space-y-5px">
+      <div class="bg-color p-5 space-y-5px">
         <div>
           <Switch
             activeColor="#ee0a24"

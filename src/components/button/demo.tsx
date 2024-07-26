@@ -3,7 +3,7 @@ export default function InputDemo() {
   return (
     <div class="py-3">
       <div class="text-color/60 mb-1 mx-5">Basic</div>
-      <div class="bg-white flex flex-wrap py-3 px-5 gap-1">
+      <div class="bg-color flex flex-wrap py-3 px-5 gap-1">
         <Button type="primary">主题按钮</Button>
         <Button type="secondary">次要按钮</Button>
 
@@ -12,7 +12,7 @@ export default function InputDemo() {
         <Button class="bg-blue-500 text-white">自定义颜色</Button>
       </div>
       <div class="text-color/60 mb-1 mx-5">Outline</div>
-      <div class="bg-white flex flex-wrap py-3 px-5 gap-1">
+      <div class="bg-color flex flex-wrap py-3 px-5 gap-1">
         <Button outline type="primary">
           主题线框
         </Button>
@@ -24,7 +24,7 @@ export default function InputDemo() {
         </Button>
       </div>
       <div class="text-color/60 mb-1 mx-5">Light</div>
-      <div class="bg-white flex flex-wrap py-3 px-5 gap-1">
+      <div class="bg-color flex flex-wrap py-3 px-5 gap-1">
         <Button type="primary" class="!bg-primary/20 !text-primary">
           主题背景
         </Button>
@@ -39,7 +39,7 @@ export default function InputDemo() {
         </Button>
       </div>
       <div class="text-color/60 mt-3 mb-1 mx-5">Disabled</div>
-      <div class="bg-white py-3 px-5 space-x-[3px]">
+      <div class="bg-color py-3 px-5 space-x-[3px]">
         <Button disabled type="primary">
           主题禁用
         </Button>
@@ -49,7 +49,7 @@ export default function InputDemo() {
         <Button disabled>默认禁用</Button>
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">Custom size style rounded</div>
-      <div class="bg-white p-5">
+      <div class="bg-color p-5">
         <div class="space-x-1">
           <Button type="primary" size="small">
             小按钮
@@ -69,7 +69,7 @@ export default function InputDemo() {
         </div>
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">Loading</div>
-      <div class="bg-white p-5 space-x-[5px]">
+      <div class="bg-color p-5 space-x-[5px]">
         <Button type="primary" loading />
         <Button type="primary" loading disabled>
           disabled
@@ -79,7 +79,7 @@ export default function InputDemo() {
         </Button>
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">Debounce</div>
-      <div class="bg-white p-5 space-x-[5px]">
+      <div class="bg-color p-5 space-x-[5px]">
         <Button
           type="primary"
           loading="debounce"
@@ -96,7 +96,7 @@ export default function InputDemo() {
         </Button>
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">Beautiful</div>
-      <div class="bg-white p-5 space-x-[5px]">
+      <div class="bg-color p-5 space-x-[5px]">
         <Button class="!border-[red] border-dashed text-[red]" plain>
           虚线边框
         </Button>

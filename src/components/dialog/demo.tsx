@@ -9,10 +9,10 @@ export default function toastDemo() {
   const [visible, toggle] = useToggle();
   const [visible3, setVisible3] = createSignal(false);
   const [visible4, setVisible4] = createSignal(false);
-  const [showCancelButton, setShowCancelButton] = createSignal(true);
-  const [title, setTitle] = createSignal('');
+  const [showCancelButton] = createSignal(true);
+  const [title] = createSignal('');
   const [second, setSecond] = createSignal(10);
-  const [okButtonText, setOkButtonText] = createSignal<string>('确认');
+  const [okButtonText] = createSignal<string>('确认');
 
   let dialogRef;
   function open1() {
@@ -52,7 +52,7 @@ export default function toastDemo() {
     dialogRef.show({
       content: '万物皆可GPT',
       title: '提示',
-      onOk: async (v) => {
+      onOk: async () => {
         return new Promise((resolve) => {
           setTimeout(() => {
             resolve(true);
@@ -129,7 +129,7 @@ export default function toastDemo() {
   return (
     <div class="m-5">
       <div class="text-color/60 mb-1">基础用法</div>
-      <div class="bg-white dark:bg-black rounded">
+      <div class="bg-color rounded">
         <div class="active:bg-active" on:click={open1}>
           <div class="p-3 pl-0 ml-5 border-b-[0.5px]">提示弹窗</div>
         </div>
@@ -144,7 +144,7 @@ export default function toastDemo() {
         </div>
       </div>
       <div class="text-color/60 mb-1 mt-4">高级用法（JSX）</div>
-      <div class="bg-white dark:bg-black rounded">
+      <div class="bg-color  rounded">
         <div class="active:bg-active" on:click={open5}>
           <div class="p-3 pl-0 ml-5 border-b-[0.5px]">弹窗定制化</div>
         </div>
@@ -153,7 +153,7 @@ export default function toastDemo() {
         </div>
       </div>
       <div class="text-color/60 mb-1 mt-4">函数式调用</div>
-      <div class="bg-white dark:bg-black rounded">
+      <div class="bg-color  rounded">
         <div class="active:bg-active" on:click={alert}>
           <div class="p-3 pl-0 ml-5 border-b-[0.5px]">Dialog.alert</div>
         </div>

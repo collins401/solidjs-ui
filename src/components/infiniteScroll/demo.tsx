@@ -34,7 +34,7 @@ export default function infiniteScrollDemo() {
 
   async function loadmore() {
     console.log('loadmoreee');
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         const arrs = [...list(), ...arr];
         setList(arrs);
@@ -47,7 +47,7 @@ export default function infiniteScrollDemo() {
   }
   return (
     <>
-      <div class="bg-white mt-4">
+      <div class="bg-color mt-4">
         <For each={list()}>{(i) => <div class="border-b py-4">{i}</div>}</For>
       </div>
       <InfiniteScroll loadMore={loadmore} hasMore={hasMore()} />

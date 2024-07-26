@@ -1,4 +1,3 @@
-import { createSignal } from 'solid-js';
 import { Toast } from './index';
 import { SvgIcon } from '@/components';
 
@@ -35,7 +34,7 @@ export default function toastDemo() {
   }
   return (
     <>
-      <div class="bg-white m-4 rounded px-4">
+      <div class="bg-color m-4 rounded px-4">
         <div class="border-b-[0.5px] p-3 pl-0" on:click={handler}>
           常规提示<span class="text-color/60 text-12px">（默认3秒）</span>
         </div>

@@ -1,4 +1,5 @@
-import { createEffect, createMemo, createSignal, JSX, Show, mergeProps } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { createEffect, createMemo, createSignal, Show, mergeProps } from 'solid-js';
 
 import { Transition } from 'solid-transition-group';
 import { css } from 'solid-styled-components';
@@ -54,7 +55,7 @@ export function Popup(props: PopupProps) {
         <Show when={visible()}>
           <div
             id="picker"
-            classList={{ 'bg-white': true }}
+            classList={{ 'bg-color': true }}
             class={`${theme.classPrefix}-popup-${mainProps.position || 'custom'} ${css`
               position: fixed;
               overflow: auto;

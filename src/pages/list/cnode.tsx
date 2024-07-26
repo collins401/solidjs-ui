@@ -1,4 +1,4 @@
-import { createResource, createSignal, For, Index } from 'solid-js';
+import { createResource, For } from 'solid-js';
 import { useNavigate } from '@solidjs/router';
 import { Navbar, SafeArea } from '@/components';
 import { cnodeTopics } from '@/services/app';
@@ -12,7 +12,7 @@ export default function List() {
     limit: 60,
     tab: 'good'
   };
-  const [data, { mutate, refetch }] = createResource(parmas, cnodeTopics);
+  const [data] = createResource(parmas, cnodeTopics);
   console.log(data()?.data);
 
   function detail(id: string) {
@@ -22,7 +22,7 @@ export default function List() {
   return (
     <>
       <Navbar title="长列表" />
-      <div class="my-2.5 bg-white">
+      <div class="my-2.5 bg-color">
         <For each={data()?.data.data}>
           {(list, i) => (
             <div class="pl-3 active:bg-active" on:click={() => detail(list.id)}>

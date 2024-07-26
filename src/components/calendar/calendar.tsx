@@ -75,7 +75,7 @@ export function Calendar(props: CalendarProps) {
     mainProps.onClose?.();
   }
 
-  function handlerScroll(e) {
+  function handlerScroll() {
     if (rangeDate().length > 0) {
       const PANEL_HEIGHT = 300;
       let i = 0;
@@ -102,7 +102,7 @@ export function Calendar(props: CalendarProps) {
         <Transition name="fade-scale">
           <Show when={mainProps.open}>
             <div
-              class={`bg-white ${css`
+              class={`bg-color ${css`
                 z-index: ${theme.maskZIndex + 20};
                 position: fixed;
                 width: 85vw;
@@ -157,9 +157,7 @@ export function Calendar(props: CalendarProps) {
                   清除
                 </span>
                 <div class="space-x-2">
-                  <Button plain onClick={cancel}>
-                    取消
-                  </Button>
+                  <Button onClick={cancel}>取消</Button>
                   <Button type="primary" onClick={confirm}>
                     确定
                   </Button>

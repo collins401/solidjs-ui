@@ -43,7 +43,7 @@ export default function CalendarDemo() {
   return (
     <div class="m-3">
       <div class="text-color/60 mb-1">自定义面板日历及水印: {value1().toString()}</div>
-      <div class="bg-white rounded shadow p-4 mb-3">
+      <div class="bg-color rounded shadow p-4 mb-3">
         <div class="flex items-center justify-between text-center mb-3 space-x-2">
           <SvgIcon fill="fill-primary" type="back" onClick={() => switchMonth(-1)} />
           <span class="text-base font-medium">{dayjs(month()).format('YYYY年MM月')}</span>
@@ -69,7 +69,7 @@ export default function CalendarDemo() {
           />
         </BigStyled>
       </div>
-      <div class="bg-white rounded shadow my-3">
+      <div class="bg-color rounded shadow my-3">
         <div class=" border-b active:bg-active">
           <div class="flex items-center justify-between p-3" on:click={singleToggle}>
             <div>选择日期</div>
@@ -102,7 +102,7 @@ export default function CalendarDemo() {
         </div>
       </div>
       <div>设置周起始日为周一、自定义标记</div>
-      <div class="bg-white rounded shadow p-4 mb-3">
+      <div class="bg-color rounded shadow p-4 mb-3">
         <div class="grid grid-cols-7 text-center mb-2">
           <For each={WEEK_EN2}>
             {(e, i) => <div classList={{ 'text-color/40': i() === 0 || i() === 6 }}>{e}</div>}

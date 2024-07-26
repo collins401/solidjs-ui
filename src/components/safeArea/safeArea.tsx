@@ -2,19 +2,18 @@ import { mergeProps, Show } from 'solid-js';
 import { css } from 'solid-styled-components';
 interface SafeAreaProps {
   position?: 'bottom' | 'top';
-  multiple?: number;
 }
 
 export function SafeArea(props: SafeAreaProps) {
-  const mainProps = mergeProps({ position: 'bottom', multiple: 0.8 }, props);
+  const mainProps = mergeProps({ position: 'bottom' }, props);
   return (
     <Show
       when={mainProps.position === 'top'}
       fallback={
         <div
           class={css`
-            padding-bottom: calc(constant(safe-area-inset-bottom) * ${mainProps.multiple});
-            padding-bottom: calc(env(safe-area-inset-bottom) * ${mainProps.multiple});
+            padding-bottom: constant(safe-area-inset-bottom);
+            padding-bottom: env(safe-area-inset-bottom);
           `}
         />
       }

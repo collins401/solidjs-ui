@@ -1,10 +1,10 @@
-import { createSignal, Index } from 'solid-js';
+import { createSignal } from 'solid-js';
 import { Button } from '../button';
-import { Popup, PopupProps } from './index';
+import type { PopupProps } from './index';
+import { Popup } from './index';
 import { Toast } from '../toast';
 import IMG from '../../assets/images/img1.png';
 import CLOSE from '../../assets/images/close.png';
-import { SafeArea } from '../safeArea';
 
 export default function PopupDemo() {
   const [visible, setVisible] = createSignal(false);

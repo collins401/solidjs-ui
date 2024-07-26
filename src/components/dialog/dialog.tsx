@@ -1,5 +1,5 @@
 import type { JSX } from 'solid-js';
-import { createEffect, createSignal, mergeProps, Show, onCleanup } from 'solid-js';
+import { createEffect, createSignal, mergeProps, Show } from 'solid-js';
 import { Mask, Loading } from '@/components';
 import { styled } from 'solid-styled-components';
 import { Transition } from 'solid-transition-group';
@@ -23,7 +23,7 @@ export interface DialogProps {
   ref?: any;
 }
 
-const DialogStyle = styled.div((props) => ({
+const DialogStyle = styled.div(() => ({
   position: 'fixed',
   top: '45%',
   width: '80vw',
@@ -99,7 +99,7 @@ export function Dialog(props: DialogProps) {
       <Transition name="fade-scale">
         <Show when={visible()}>
           <DialogStyle
-            class={`${config?.theme.classPrefix}-dialog bg-white dark:bg-black ${mainProps.class || ''}`}
+            class={`${config?.theme.classPrefix}-dialog bg-color ${mainProps.class || ''}`}
             style={mainProps.style}
           >
             <Show when={mainProps.title}>

@@ -11,14 +11,14 @@ export default function RadioDemo() {
   return (
     <div class="my-5">
       <div class="text-color/60 mb-1 mx-5">基础用法</div>
-      <div class="bg-white py-3 px-5">
+      <div class="bg-color py-3 px-5">
         <Radio checked={false}>自定义文案</Radio>
         <Radio checked={true} disabled>
           禁止点击
         </Radio>
       </div>
       <div class="text-color/60 mb-1 mx-5 mt-5">有默认值</div>
-      <div class="bg-white p-5">
+      <div class="bg-color p-5">
         <RadioGroup
           class="flex space-x-2.5"
           value={checked()}
@@ -29,7 +29,7 @@ export default function RadioDemo() {
       </div>
 
       <div class="text-color/60 mb-1 mx-5 mt-5">自定义颜色、大小</div>
-      <div class="bg-white p-5 space-y-1">
+      <div class="bg-color p-5 space-y-1">
         <div>
           <Radio class="text-[20px]" checked={true}>
             20px

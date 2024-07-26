@@ -1,4 +1,5 @@
-import { createEffect, onMount, JSX, Show, createSignal, mergeProps } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { createEffect, onMount, Show, createSignal, mergeProps } from 'solid-js';
 import { Loading } from '../loading';
 import { useRect } from '../utils/useRect';
 export interface InfiniteScrollProps {
@@ -40,7 +41,6 @@ export function InfiniteScroll(props: InfiniteScrollProps) {
     }
   }
   async function onScroll() {
-    console.log('onScroll');
     init();
   }
 

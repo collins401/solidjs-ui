@@ -1,4 +1,5 @@
-import { mergeProps, JSX, createEffect } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { mergeProps, createEffect } from 'solid-js';
 import { css } from 'solid-styled-components';
 import { SafeArea, useConfigProvider } from '@/components';
 
@@ -29,7 +30,7 @@ export function SubmitBar(props: SubmitBarProps) {
           box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.06);
         `}`}
       >
-        <div class="bg-white">{props.children}</div>
+        <div class="bg-color">{props.children}</div>
         <SafeArea />
       </div>
       {mianProps.fixed && <div ref={placeholder} />}

@@ -1,4 +1,5 @@
-import { createEffect, createMemo, createSignal, For, JSX, mergeProps, useContext } from 'solid-js';
+import type { JSX } from 'solid-js';
+import { createEffect, createMemo, createSignal, For, mergeProps, useContext } from 'solid-js';
 import { css, styled } from 'solid-styled-components';
 import dayjs from 'dayjs';
 import { useConfigProvider } from '../config-provider';
@@ -148,9 +149,9 @@ export function MonthPanel(props: MonthPanelProps) {
 
   return (
     <div class={`grid grid-cols-7 gap-y-[5px] leading-[34px] text-center ${mainProps.class || ''}`}>
-      <For each={fillBlankDate()}>{(d) => <div />}</For>
+      <For each={fillBlankDate()}>{() => <div />}</For>
       <For each={totalDays()}>
-        {(day, i) => (
+        {(day) => (
           <DateStyled>
             <div
               class={`${hightClass(day.txt)} ${css`
